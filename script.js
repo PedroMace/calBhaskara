@@ -6,6 +6,9 @@
 
   var c = document.forms["form"]["c"].value;
 
+  var textThing = document.querySelector(".result");
+  textThing.innerHTML = "";
+
   if (a == "") {
       alert("Todos os valores precisam ser preenchidos.");
       return false;
@@ -26,6 +29,7 @@ var d = (b * b);
 var d2 = (4 * a * c);
 
 var d3 = d - d2
+var d3Fixed = d3.toFixed(3);
 
 var de = Math.sqrt(d3);
 
@@ -34,19 +38,21 @@ var sp = (0 - b + de);
 var sp2 = 2 * a;
 
 var sp3 = sp / sp2;
+var sp3Fixed = sp3.toFixed(3);
 
 var sp4 = (0 - b - de);
 
 var sp5 = sp4 / sp2;
+var sp5Fixed = sp5.toFixed(3);
 
   if (d3 < 0) {
-  alert("Delta resultou em " + d3 + ". Sua equação não há conjunto solução Real. ");
+    textThing.appendChild(document.createTextNode("Δ = " + d3Fixed + " logo sua equação não há conjunto solução Real."));
 }
   else if (d3 == 0) {
-  alert("Suas raízes são iguais, sendo " + sp5 + ", com delta sendo 0.");
+    textThing.appendChild(document.createTextNode(`x', x" = ` + sp5Fixed + ` , Δ = 0`));
 }
   else if (d3 > 0) {
-  alert("Suas raízes são " + sp5 + " e " + sp3 + " com delta sendo " + d3 + ".");
+    textThing.appendChild(document.createTextNode(`x' = ` + sp5Fixed + ` , x" ` + sp3Fixed + ` , Δ =  ` + d3Fixed + ``));
 }
   return forms['form'];
 }
