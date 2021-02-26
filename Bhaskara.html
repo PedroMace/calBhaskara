@@ -3,23 +3,7 @@
   <head>
     <title>َBhaskara</title>
     <link href="back index.css" rel="stylesheet" type="text/css"/>
-    <style>
-.box{
-  height: 520px;
-  width: 350px;
-  padding-bottom: -0px;
-	padding-right: 40px;
-	padding-left: 40px;
-	padding-top: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: #222222;
-  border-radius: 15px;
-  animation: fade 3s;
-}
-</style>
+
   </head>
   <body>
 
@@ -33,11 +17,10 @@
 
   <button class="button" onclick="cal()">Calcular</button>
   <button class="side" onclick="how()">Como funciona?</button>
-  <a href="Teorema de Tales.html" class="link">Teorema de Tales</a><br>
-  <a href="Criar equacao.html" class="link">Criar Equação</a><br>
-  <a href="Pagina inicial.html" class="link">Pagina inicial</a>
-  <p class="credit" >Feito por Pedro Mace</p>
-
+  <div>
+    <span class="resultSpan"><strong>Resultado:</strong></span>
+    <strong><p class="result"></p></strong>
+</div>
 </form>
 
 <script type="text/javascript" src="script.js"></script>
